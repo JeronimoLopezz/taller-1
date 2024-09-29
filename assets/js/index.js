@@ -7,9 +7,8 @@ fetch('data/taller.json')
 
         const datos = document.getElementById('datos');
         datos.innerHTML = `
-            <div class="card p-3">
+            <div class="bg-dark text-white text-center py-4">
                 <h4>Tienda de Computadores</h4>
-                <p><strong>Nombre:</strong> ${data.datos_tienda.nombre}</p>
                 <p><strong>Correo:</strong> ${data.datos_tienda.correo}</p>
                 <p><strong>Teléfono:</strong> ${data.datos_tienda.telefono}</p>
                 <p><strong>Dirección:</strong> ${data.datos_tienda.direccion}</p>
@@ -21,7 +20,6 @@ fetch('data/taller.json')
         for (let i = 0; i < computadores.length; i++) {
             computadoresHTML += `
             <tr>
-                <td><img src="${computadores[i].imagen}" alt="${computadores[i].nombre}" class="img-thumbnail"></td>
                 <td>${computadores[i].nombre}</td>
                 <td>${computadores[i].descripcion}</td>
                 <td>$${computadores[i].precio}</td>
